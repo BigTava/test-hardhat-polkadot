@@ -1,10 +1,13 @@
 import {
   time,
-  loadFixture,
+  loadFixture,  // get rid of these
 } from "@nomicfoundation/hardhat-toolbox/network-helpers";
 import { anyValue } from "@nomicfoundation/hardhat-chai-matchers/withArgs";
 import { expect } from "chai";
 import hre from "hardhat";
+// time in pallet-revive returns in miliseconds
+// time should be some place in the future. 
+// change deploy time
 
 describe("Lock", function () {
   // We define a fixture to reuse the same setup in every test.
