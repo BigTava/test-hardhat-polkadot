@@ -1,6 +1,5 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-chai-matchers"
-import { task } from "hardhat/config";
 
 import "@nomicfoundation/hardhat-toolbox";
 
@@ -10,6 +9,9 @@ import "hardhat-revive-node";
 const config: HardhatUserConfig = {
   solidity: "0.8.28",
   networks: {
+    localhost: {
+        chainId: 31337,
+    },
     hardhat: {
       polkavm: true,
       forking: {
@@ -37,9 +39,5 @@ const config: HardhatUserConfig = {
       },
   },
 };
-
-task("balance", "Prints an account's balance")
-  .addParam("account", "The account's address")
-  .setAction(async () => {});
   
 export default config;
