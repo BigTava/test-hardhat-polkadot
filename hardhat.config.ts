@@ -1,7 +1,5 @@
 import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-chai-matchers"
-
-import "@nomicfoundation/hardhat-toolbox";
+import "@nomicfoundation/hardhat-ethers"
 
 import "hardhat-resolc";
 import "hardhat-revive-node";
