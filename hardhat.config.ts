@@ -1,15 +1,11 @@
 import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-ethers"
-
+import "@nomicfoundation/hardhat-toolbox";
 import "hardhat-resolc";
 import "hardhat-revive-node";
 
 const config: HardhatUserConfig = {
   solidity: "0.8.28",
   networks: {
-    localhost: {
-        chainId: 31337,
-    },
     hardhat: {
       polkavm: true,
       forking: {

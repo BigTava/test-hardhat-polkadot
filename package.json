@@ -1,9 +1,7 @@
 {
-  "name": "hardhat-polkadot-boilerplate",
+  "name": "hardhat-polkadot-boilerplace",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/BigTava/hardhat-polkadot-boilerplate.git",
-  "author": "Tiago Tavares <tiago.tavares@parity.io>",
   "license": "MIT",
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
@@ -19,7 +17,7 @@
     "@types/chai": "^4.2.0",
     "@types/mocha": ">=9.1.0",
     "@types/node": ">=18.0.0",
-    "chai": "4",
+    "chai": "^4.2.0",
     "ethers": "^6.13.5",
     "hardhat": "^2.22.19",
     "hardhat-gas-reporter": "^2.2.2",

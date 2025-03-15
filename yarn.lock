@@ -1697,7 +1697,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chai@npm:4":
+"chai@npm:^4.2.0":
   version: 4.5.0
   resolution: "chai@npm:4.5.0"
   dependencies:
@@ -2866,9 +2866,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hardhat-polkadot-boilerplate@workspace:.":
+"hardhat-polkadot-boilerplace@workspace:.":
   version: 0.0.0-use.local
-  resolution: "hardhat-polkadot-boilerplate@workspace:."
+  resolution: "hardhat-polkadot-boilerplace@workspace:."
   dependencies:
     "@nomicfoundation/hardhat-chai-matchers": "npm:^2.0.8"
     "@nomicfoundation/hardhat-ethers": "npm:^3.0.8"
@@ -2883,7 +2883,7 @@ __metadata:
     "@types/chai": "npm:^4.2.0"
     "@types/mocha": "npm:>=9.1.0"
     "@types/node": "npm:>=18.0.0"
-    chai: "npm:4"
+    chai: "npm:^4.2.0"
     ethers: "npm:^6.13.5"
     hardhat: "npm:^2.22.19"
     hardhat-gas-reporter: "npm:^2.2.2"
@@ -2896,9 +2896,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"hardhat-resolc@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc::locator=hardhat-polkadot-boilerplate%40workspace%3A.":
+"hardhat-resolc@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc::locator=hardhat-polkadot-boilerplace%40workspace%3A.":
   version: 0.0.6
-  resolution: "hardhat-resolc@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc#/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc::hash=d19bed&locator=hardhat-polkadot-boilerplate%40workspace%3A."
+  resolution: "hardhat-resolc@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc#/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc::hash=d19bed&locator=hardhat-polkadot-boilerplace%40workspace%3A."
   dependencies:
     "@types/debug": "npm:^4"
     "@types/node": "npm:^22.10.2"
@@ -2911,9 +2911,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hardhat-revive-node@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node::locator=hardhat-polkadot-boilerplate%40workspace%3A.":
+"hardhat-revive-node@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node::locator=hardhat-polkadot-boilerplace%40workspace%3A.":
   version: 0.0.5
-  resolution: "hardhat-revive-node@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node#/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node::hash=008e27&locator=hardhat-polkadot-boilerplate%40workspace%3A."
+  resolution: "hardhat-revive-node@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node#/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node::hash=008e27&locator=hardhat-polkadot-boilerplace%40workspace%3A."
   dependencies:
     "@types/debug": "npm:^4"
     "@types/fs-extra": "npm:^11.0.4"
