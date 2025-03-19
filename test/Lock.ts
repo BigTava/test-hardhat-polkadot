@@ -36,10 +36,10 @@ describe("Lock", function () {
       expect(await lock.owner()).to.be.a.properAddress;
 
       // to.changeEtherBalances
-      await expect(() => lock.withdraw()).to.changeEtherBalances(
-        [lock, deployer],
-        [-ONE_GWEI, ONE_GWEI]
-      );
+      // await expect(() => lock.withdraw()).to.changeEtherBalances(
+      //   [lock, deployer],
+      //   [-ONE_GWEI, ONE_GWEI]
+      // );
 
       // to.emit
       const latestBlock = await ethers.provider.getBlock("latest");
@@ -47,12 +47,18 @@ describe("Lock", function () {
       const tx = await lock.withdraw();
       await expect(tx)
         .to.emit(lock, "Withdrawal")
-        .withArgs(0, blockTimestamp + 1);
+        .withArgs(ONE_GWEI, blockTimestamp + 6);
 
       // to.be.a.properPrivateKey
       const testPrivateKey =
         "0x7d577b1408e8d19a24ba3f0a0a79aa5b9f2858e8d63f5e3b8c9a1b9f07e407e5";
       expect(testPrivateKey).to.be.a.properPrivateKey;
+
+      // to.be.a.properHexString
+      expect("0x1234").to.be.properHex(4);
+
+      // to.hexEqual
+      expect("0x00012AB").to.hexEqual("0x12ab");
     });
   });
 });

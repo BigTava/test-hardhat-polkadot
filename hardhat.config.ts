@@ -3,6 +3,8 @@ import "@nomicfoundation/hardhat-toolbox";
 import "hardhat-resolc";
 import "hardhat-revive-node";
 
+import "./tasks";
+
 const config: HardhatUserConfig = {
   solidity: "0.8.28",
   networks: {
@@ -18,7 +20,7 @@ const config: HardhatUserConfig = {
       adapterConfig: {
         adapterBinaryPath: '/Users/tiago/Projects/polkadot-sdk/target/release/eth-rpc',
         dev: true
-      }
+      },
     },
   },
   resolc: {
