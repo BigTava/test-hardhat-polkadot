@@ -2898,7 +2898,7 @@ __metadata:
 
 "hardhat-resolc@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc::locator=hardhat-polkadot-boilerplace%40workspace%3A.":
   version: 0.0.6
-  resolution: "hardhat-resolc@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc#/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc::hash=d19bed&locator=hardhat-polkadot-boilerplace%40workspace%3A."
+  resolution: "hardhat-resolc@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc#/Users/tiago/Projects/hardhat-revive/packages/hardhat-resolc::hash=f3f705&locator=hardhat-polkadot-boilerplace%40workspace%3A."
   dependencies:
     "@types/debug": "npm:^4"
     "@types/node": "npm:^22.10.2"
@@ -2907,13 +2907,13 @@ __metadata:
     solc: "npm:^0.8.28"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.7.2"
-  checksum: 10c0/ee95c19c92d4a0fb61e7594c2d027ba9890cca8c825d3b4138465e8be10807931ca10e0bda0d5471463c5eb9c4c824c2070f4b8401fe231d7302adc5497c6992
+  checksum: 10c0/2fbe0e98dcc2b169f90da3b37b28fc051ac6f3710a77800b4aa2b53f6920e8cac4521ba4860869427c25b4634323c7da11095df304057d0d69933169a7a9a039
   languageName: node
   linkType: hard
 
 "hardhat-revive-node@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node::locator=hardhat-polkadot-boilerplace%40workspace%3A.":
   version: 0.0.5
-  resolution: "hardhat-revive-node@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node#/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node::hash=008e27&locator=hardhat-polkadot-boilerplace%40workspace%3A."
+  resolution: "hardhat-revive-node@file:/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node#/Users/tiago/Projects/hardhat-revive/packages/hardhat-revive-node::hash=04308e&locator=hardhat-polkadot-boilerplace%40workspace%3A."
   dependencies:
     "@types/debug": "npm:^4"
     "@types/fs-extra": "npm:^11.0.4"
@@ -2922,7 +2922,7 @@ __metadata:
     hardhat: "npm:^2.22.17"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.7.2"
-  checksum: 10c0/34b6f98c574b4482a11735e87fdb345d0b7723de1cd3eac9a7ca49ba413ef0a0daa0034df8e723f67915d6d7d3da5b0bd0e2e5affde72f66b856366c8e0b5756
+  checksum: 10c0/25a1120050b2abccaa7bb588af8414c5ea0c6b3b762be37a51143dc881c740072a358d307cad677798d16d01adb8650ec182a395c2ef187e1a9d5acde8354aad
   languageName: node
   linkType: hard
 

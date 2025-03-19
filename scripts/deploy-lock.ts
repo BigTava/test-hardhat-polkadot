@@ -2,9 +2,8 @@ import { ethers } from 'hardhat';
 import "@nomicfoundation/hardhat-ethers";
 
 async function main() {
-  // try with hre
-  const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
-  const signer = await provider.getSigner();
+  // const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+  const signer = await ethers.provider.getSigner();
   const Lock = await ethers.getContractFactory("Lock", signer);
   const lock = await Lock.deploy(365 * 24 * 60 * 60 * 1000);
   await lock.waitForDeployment();

@@ -18,6 +18,7 @@ describe("Lock", function () {
       accounts = await ethers.getSigners()
       deployer = accounts[0]
       lockFactory = await ethers.getContractFactory("Lock", deployer);
+      console.log("unlockTime", unlockTime);
       lock = await lockFactory.deploy(unlockTime, { value: ONE_GWEI });
 
     });
