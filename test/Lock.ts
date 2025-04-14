@@ -48,7 +48,7 @@ describe("Lock", function () {
       const tx = await lock.withdraw();
       await expect(tx)
         .to.emit(lock, "Withdrawal")
-        .withArgs(ONE_GWEI, blockTimestamp + 6);
+        .withArgs(ONE_GWEI, blockTimestamp + 3);
 
       // to.be.a.properPrivateKey
       const testPrivateKey =

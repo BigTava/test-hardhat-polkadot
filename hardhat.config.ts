@@ -10,16 +10,10 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       polkavm: true,
-      // forking: {
-      //   url: 'wss://westend-asset-hub-rpc.polkadot.io',
-      // },
-      // accounts: [{
-      //   privateKey: '271ad9a5e1e0178acebdb572f8755aac3463d863ddfc70e32e7d5eb0b334e687',
-      //   balance: '10000000000'
-      // }],
       adapterConfig: {
         adapterBinaryPath: '/Users/tiago/Projects/polkadot-sdk/target/release/eth-rpc',
-        dev: true
+        dev: true,
+        buildBlockMode: 'Instant',
       },
       nodeConfig: {
         nodeBinaryPath: '/Users/tiago/Projects/polkadot-sdk/target/release/substrate-node',
@@ -29,15 +23,15 @@ const config: HardhatUserConfig = {
     },
   },
   resolc: {
-      compilerSource: 'remix',
-      settings:
-      {
-        optimizer: {
-          enabled: true,
-          runs: 400
-        },
-        evmVersion: "istanbul"
+    version: '1.5.2',
+    compilerSource: 'remix',
+    settings: {
+      optimizer: {
+        enabled: false,
+        runs: 600,
       },
+      evmVersion: 'istanbul',
+    },
   },
 };
   
