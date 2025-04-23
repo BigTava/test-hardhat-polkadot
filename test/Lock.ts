@@ -1,5 +1,5 @@
 import "@nomicfoundation/hardhat-ethers";
-import { ethers } from 'hardhat';
+import { ethers } from "hardhat";
 import { expect } from "chai";
 import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
 import { Lock, Lock__factory } from "../typechain-types";
@@ -10,28 +10,39 @@ describe("Lock", function () {
   let accounts: HardhatEthersSigner[];
   let deployer: HardhatEthersSigner;
   const unlockTime = 365 * 24 * 60 * 60 + Math.floor(Date.now() / 1000);
-  const ONE_GWEI = 1_000_000_000;
+  const ONE_GWEI = ethers.parseUnits("1", "gwei");
 
   describe("Deployment", function () {
-    
     before(async () => {
-      accounts = await ethers.getSigners()
-      deployer = accounts[0]
-      lockFactory = await ethers.getContractFactory("Lock", deployer);
+      accounts = await ethers.getSigners();
+      deployer = accounts[0];
+      const block = await ethers.provider.getBlock("latest");
+      const unlockTime = block!.timestamp + 365 * 24 * 60 * 60;
+      lockFactory = (await ethers.getContractFactory(
+        "Lock",
+        deployer
+      )) as Lock__factory;
       console.log("unlockTime", unlockTime);
-      lock = await lockFactory.deploy(unlockTime, { value: ONE_GWEI });
-
+      console.log("deployer", deployer.address);
+      console.log("ONE_GWEI", ONE_GWEI.toString());
+      lock = await lockFactory.deploy(unlockTime, {
+        value: ONE_GWEI,
+      });
     });
 
     it("Test chai matchers", async function () {
       // to.equal
       expect(await lock.unlockTime()).to.equal(unlockTime);
       expect(await lock.owner()).to.equal(deployer.address);
-      expect(await ethers.provider.getBalance(lock.getAddress())).to.equal(ONE_GWEI);
+      expect(await ethers.provider.getBalance(lock.getAddress())).to.equal(
+        ONE_GWEI
+      );
 
       // to.be.revertedWith
-      const other_address = accounts[1]
-      await expect(lock.connect(other_address).withdraw()).to.be.revertedWith("You aren't the owner");
+      const other_address = accounts[1];
+      await expect(lock.connect(other_address).withdraw()).to.be.revertedWith(
+        "You aren't the owner"
+      );
 
       // to.be.a.properAddress
       expect(await lock.owner()).to.be.a.properAddress;
