@@ -18,13 +18,22 @@ describe("Lock", function () {
       deployer = accounts[0];
       const block = await ethers.provider.getBlock("latest");
       const unlockTime = block!.timestamp + 365 * 24 * 60 * 60;
+
       lockFactory = (await ethers.getContractFactory(
         "Lock",
         deployer
       )) as Lock__factory;
-      console.log("unlockTime", unlockTime);
-      console.log("deployer", deployer.address);
-      console.log("ONE_GWEI", ONE_GWEI.toString());
+
+      const lockUnsigned = await lockFactory.getDeployTransaction(unlockTime, {
+        value: ONE_GWEI,
+      });
+
+      // TODO: throws errord
+      // const estimatedGas = await ethers.provider.estimateGas({
+      //   from: deployer.address,
+      //   data: lockUnsigned.data!,
+      // });
+
       lock = await lockFactory.deploy(unlockTime, {
         value: ONE_GWEI,
       });
