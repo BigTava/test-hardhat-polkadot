@@ -2,7 +2,6 @@
 pragma solidity ^0.8.28;
 
 import "hardhat/console.sol";
-import "@openzeppelin/contracts/finance/VestingWallet.sol";
 
 contract Lock {
     uint public unlockTime;

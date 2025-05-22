@@ -9,16 +9,15 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       polkavm: true,
-      adapterConfig: {
-        adapterBinaryPath:
-          "/Users/tiago/Projects/polkadot-sdk/target/release/eth-rpc",
-        dev: true,
-        buildBlockMode: "Instant",
-      },
       nodeConfig: {
         nodeBinaryPath:
-          "/Users/tiago/Projects/polkadot-sdk/target/release/substrate-node",
+          "/Users/tiago/Projects/polkadot-sdk/target/debug/substrate-node",
         rpcPort: 8000,
+        dev: true,
+      },
+      adapterConfig: {
+        adapterBinaryPath:
+          "/Users/tiago/Projects/polkadot-sdk/target/production/eth-rpc",
         dev: true,
       },
     },
@@ -28,7 +27,6 @@ const config: HardhatUserConfig = {
     },
   },
   resolc: {
-    version: "1.5.2",
     compilerSource: "npm",
   },
 };
