@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.28;
+pragma solidity ^0.8.2;
 
 import "hardhat/console.sol";
 
@@ -11,7 +11,7 @@ contract Lock {
 
     constructor(uint _unlockTime) payable {
         require(
-            block.timestamp < _unlockTime,
+            block.timestamp < _unlockTime + 1,
             "Unlock time should be in the future"
         );
 
