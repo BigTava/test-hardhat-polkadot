@@ -16,7 +16,6 @@
     "@parity/hardhat-polkadot": "file:/Users/tiago/Projects/hardhat-polkadot/packages/hardhat-polkadot",
     "@parity/hardhat-polkadot-node": "file:/Users/tiago/Projects/hardhat-polkadot/packages/hardhat-polkadot-node",
     "@parity/hardhat-polkadot-resolc": "file:/Users/tiago/Projects/hardhat-polkadot/packages/hardhat-polkadot-resolc",
-    "@parity/resolc": "^0.1.0-dev.16",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.2.0",
@@ -24,14 +23,11 @@
     "@types/node": ">=18.0.0",
     "chai": "^4.2.0",
     "ethers": "^6.13.5",
-    "hardhat": "^2.24.0",
+    "hardhat": "^2.26.1",
     "hardhat-gas-reporter": "^1.0.8",
     "solidity-coverage": "^0.8.14",
     "ts-node": ">=8.0.0",
     "typechain": "^8.3.2",
     "typescript": ">=4.5.0"
-  },
-  "devDependencies": {
-    "solc": "0.8.28"
   }
 }
