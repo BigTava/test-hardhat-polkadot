@@ -28,14 +28,30 @@ const config: HardhatUserConfig = {
       //     "/Users/tiago/Projects/polkadot-sdk/target/production/eth-rpc",
       //   dev: true,
       // },
-      forking: {
-        url: "https://testnet-passet-hub.polkadot.io",
-      },
+      // forking: {
+      //   url: "https://testnet-passet-hub.polkadot.io",
+      // },
+      // accounts: [
+      //   {
+      //     privateKey:
+      //       "271ad9a5e1e0178acebdb572f8755aac3463d863ddfc70e32e7d5eb0b334e687",
+      //     balance: "10000000000",
+      //   },
+      // ],
       docker: true,
     },
     localNode: {
       polkavm: true,
       url: `http://127.0.0.1:8545`,
+      polkadotUrl: `ws://127.0.0.1:8000`,
+      chainId: 420420420,
+    },
+    polkadotHubTestnet: {
+      polkavm: true,
+      url: "https://testnet-passet-hub-eth-rpc.polkadot.io",
+      accounts: [
+        "271ad9a5e1e0178acebdb572f8755aac3463d863ddfc70e32e7d5eb0b334e687",
+      ],
       chainId: 420420422,
     },
   },
