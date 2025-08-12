@@ -19,13 +19,13 @@ const config: HardhatUserConfig = {
       polkavm: true,
       // nodeConfig: {
       //   nodeBinaryPath:
-      //     "/Users/tiago/Projects/polkadot-sdk/target/debug/substrate-node",
+      //     "/Users/tiago/Projects/polkadot-sdk/target/debug/revive-dev-node",
       //   rpcPort: 8000,
       //   dev: true,
       // },
       // adapterConfig: {
       //   adapterBinaryPath:
-      //     "/Users/tiago/Projects/polkadot-sdk/target/production/eth-rpc",
+      //     "/Users/tiago/Projects/polkadot-sdk/target/debug/eth-rpc",
       //   dev: true,
       // },
       // forking: {
