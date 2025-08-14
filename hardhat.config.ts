@@ -17,6 +17,9 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       polkavm: true,
+      // forking: {
+      //   url: "https://sepolia.gateway.tenderly.co",
+      // },
       // nodeConfig: {
       //   nodeBinaryPath:
       //     "/Users/tiago/Projects/polkadot-sdk/target/debug/revive-dev-node",
@@ -25,12 +28,12 @@ const config: HardhatUserConfig = {
       // },
       // adapterConfig: {
       //   adapterBinaryPath:
-      //     "/Users/tiago/Projects/polkadot-sdk/target/debug/eth-rpc",
+      //     "/Users/tiago/Projects/polkadot-sdk/target/release/eth-rpc",
       //   dev: true,
       // },
-      // forking: {
-      //   url: "https://testnet-passet-hub.polkadot.io",
-      // },
+      forking: {
+        url: "https://testnet-passet-hub.polkadot.io",
+      },
       // accounts: [
       //   {
       //     privateKey:
@@ -44,7 +47,6 @@ const config: HardhatUserConfig = {
       polkavm: true,
       url: `http://127.0.0.1:8545`,
       polkadotUrl: `ws://127.0.0.1:8000`,
-      chainId: 420420420,
     },
     polkadotHubTestnet: {
       polkavm: true,
