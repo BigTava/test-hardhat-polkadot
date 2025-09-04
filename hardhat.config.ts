@@ -20,20 +20,20 @@ const config: HardhatUserConfig = {
       // forking: {
       //   url: "https://sepolia.gateway.tenderly.co",
       // },
-      // nodeConfig: {
-      //   nodeBinaryPath:
-      //     "/Users/tiago/Projects/polkadot-sdk/target/debug/revive-dev-node",
-      //   rpcPort: 8000,
-      //   dev: true,
-      // },
-      // adapterConfig: {
-      //   adapterBinaryPath:
-      //     "/Users/tiago/Projects/polkadot-sdk/target/release/eth-rpc",
-      //   dev: true,
-      // },
-      forking: {
-        url: "https://testnet-passet-hub.polkadot.io",
+      nodeConfig: {
+        nodeBinaryPath:
+          "/Users/tiago/Projects/polkadot-sdk/target/debug/revive-dev-node",
+        rpcPort: 8000,
+        dev: true,
       },
+      adapterConfig: {
+        adapterBinaryPath:
+          "/Users/tiago/Projects/polkadot-sdk/target/release/eth-rpc",
+        dev: true,
+      },
+      // forking: {
+      //   url: "https://testnet-passet-hub.polkadot.io",
+      // },
       // accounts: [
       //   {
       //     privateKey:

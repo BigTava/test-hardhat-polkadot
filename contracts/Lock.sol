@@ -2,12 +2,11 @@
 pragma solidity ^0.8.2;
 
 import "hardhat/console.sol";
+import {EventsLib} from "./EventsLib.sol";
 
 contract Lock {
     uint public unlockTime;
     address payable public owner;
-
-    event Withdrawal(uint amount, uint when);
 
     constructor(uint _unlockTime) payable {
         require(
@@ -22,7 +21,7 @@ contract Lock {
     function withdraw() public {
         require(msg.sender == owner, "You aren't the owner");
 
-        emit Withdrawal(address(this).balance, block.timestamp);
+        emit EventsLib.Withdrawal(address(this).balance, block.timestamp);
 
         owner.transfer(address(this).balance);
     }

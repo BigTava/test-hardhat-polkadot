@@ -26,6 +26,15 @@ describe("Lock", function () {
   describe("Deployment", function () {
     it("Should set the right unlockTime", async function () {
       expect(await lock.unlockTime()).to.equal(unlockTime);
+      const EventsLib = await ethers.getContractFactory("EventsLib");
+
+      const eventsLibView = new ethers.Contract(
+        "0x0000000000000000000000000000000000000000",
+        EventsLib.interface,
+        lock.runner
+      );
+      await expect(lock.withdraw()).to.emit(eventsLibView, "Withdrawal");
+      //       .withArgs(lockedAmount, anyValue); // We accept any value as `when` arg
     });
 
     it("Should set the right owner", async function () {
