@@ -6,7 +6,7 @@ import { ApiPromise, WsProvider } from "@polkadot/api";
 import { Keyring } from "@polkadot/keyring";
 import { u8aToHex } from "@polkadot/util";
 
-// npx hardhat run ./scripts/simple-tx.ts --network localNode
+// npx hardhat run ./scripts/deploy-child.ts --network localNode
 async function main() {
   const [signer] = await ethers.getSigners();
   const provider = ethers.provider;
